@@ -6,7 +6,7 @@ export default function VerificationPage() {
     useEffect(() => {
         const timer = setTimeout(() => setPlay(true), 1000);
         // begining verification fetch
-        fetch('https://humanverify-backend.onrender.com')
+        fetch('https://1dd7a790-b636-4d27-adca-3a13e86fb5ed-00-nw8og4iiplas.sisko.replit.dev/verify')
             .then(res => res.json())
             .then(data => {
                 setTimeout(() => {

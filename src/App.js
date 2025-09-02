@@ -7,7 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/"element={<VerificationPage/>}/>
-        <Route path="/VerifiedPage"element={<VerifiedPage/>}/>
+        <Route path="/verifiedpage"element={<VerifiedPage/>}/>
       </Routes>
     </Router>
    

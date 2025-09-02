@@ -2,11 +2,6 @@ import Lottie from "lottie-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import checkAnimation from "./Animation.json";
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ad194b71e6fd629a0d8ba245093caceb5be2840d
 export default function VerificationPage() {
     const [play, setPlay] = useState(false);
     const navigate = useNavigate();
@@ -42,6 +37,7 @@ export default function VerificationPage() {
         </div>
     )
 }
+
 
 
 

@@ -1,8 +1,10 @@
 import Lottie from "lottie-react";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import checkAnimation from "./Animation .json";
+import checkAnimation from "./Animation.json";
 export default function VerificationPage() {
     const [play, setPlay] = useState(false);
+    const navigate = useNavigate();
     useEffect(() => {
         const timer = setTimeout(() => setPlay(true), 1000);
         // begining verification fetch
@@ -10,12 +12,12 @@ export default function VerificationPage() {
             .then(res => res.json())
             .then(data => {
                 setTimeout(() => {
-                    window.location.href = data.redirect;
+                    navigate(`/${data.redirect}`);
                 }, 5000);
             })
             .catch(error => console.error('Verification failed:', error));
         return () => clearTimeout(timer);
-    }, []);
+    }, [navigate]);
     return (
         <div className="min-h-screen flex items-center justify-center  bg-gray-800 font-poppins">
             <div className="bg-white p-8  rounded shadow text-center">
@@ -23,7 +25,7 @@ export default function VerificationPage() {
                 <div className=" border-2 border-black p-6 bg-gray-100 flex justify-center mt-8">
                     <label className="flex items-center space-x-5">
                         <div className="w-10 h-10 shadow-blue-300" checked readonly>
-                            {play && <Lottie animationData={checkAnimation} loop={false} checked/>}
+                            {play && <Lottie animationData={checkAnimation} loop={false} checked />}
                         </div>
                         <span className="text-gray-800 -mr-20 text-lg font-normal space-x-2 ">Verifying your Human
                         </span>

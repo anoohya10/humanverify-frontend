@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import checkAnimation from "src/Animation.json";
+import checkAnimation from "/Animation.json";
 export default function VerificationPage() {
     const [play, setPlay] = useState(false);
     const navigate = useNavigate();
